@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An interactive birthday experience made especially for Ananya." />
+  <meta name="theme-color" content="#0c0a0f" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title id="page-title">For Ananya — A Little Something</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div id="cursor-glow" aria-hidden="true"></div>
+  <div id="cinematic-transition" aria-hidden="true"></div>
+
+  <main id="experience" class="experience" aria-live="polite" aria-busy="false">
+
+    <!-- 00 · Hook -->
+    <section class="scene scene-intro is-active" data-scene="0">
+      <div class="hero-halo" aria-hidden="true"></div>
+      <div class="scene-inner center">
+        <div id="opening-eyebrow" class="eyebrow reveal">FOR ANANYA · A LITTLE SOMETHING</div>
+        <h1 class="hero-title reveal reveal-delay-1">
+          <span id="opening-title-1">This isn't just a birthday page.</span><br />
+          <em id="opening-title-2">It's a little journey for you.</em>
+        </h1>
+        <p id="opening-copy" class="hero-copy reveal reveal-delay-2">Take your time. There are a few things waiting for you.</p>
+        <button class="primary-btn reveal reveal-delay-3 next-btn" data-next="1">
+          <span id="opening-button">Begin the journey</span><span class="arrow">→</span>
+        </button>
+        <div class="scroll-hint reveal reveal-delay-3">made slowly · meant to be felt</div>
+      </div>
+    </section>
+
+    <!-- 01 · Intention -->
+    <section class="scene" data-scene="1">
+      <div class="scene-inner center narrow">
+        <div id="chapter01-eyebrow" class="eyebrow">CHAPTER 01 · THE REASON</div>
+        <div class="scene-marker">01</div>
+        <h2><span id="chapter01-title-1">I could have sent</span><br /><em id="chapter01-title-2">a simple happy birthday.</em></h2>
+        <p id="chapter01-copy" class="hero-copy type-target" data-text=""></p>
+        <button id="chapter01-button" class="ghost-btn next-btn" data-next="2">There is more <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- 02 · One memory -->
+    <section class="scene" data-scene="2">
+      <div class="scene-inner split reverse-mobile">
+        <div class="memory-stage" data-tilt>
+          <div class="memory-shadow"></div>
+          <div class="memory-frame">
+            <div class="memory-image" id="memory-main-stage">
+              <div class="image-placeholder-inner">
+                <span class="placeholder-icon">✦</span>
+                <small>Drop a favourite photo here</small>
+              </div>
+            </div>
+            <div class="tape tape-left"></div>
+            <div class="tape tape-right"></div>
+          </div>
+          <div id="memory-caption" class="frame-caption">ONE MEMORY · A THOUSAND FEELINGS</div>
+        </div>
+        <div class="copy-block">
+          <div id="memory-eyebrow" class="eyebrow">CHAPTER 02 · ONE MEMORY</div>
+          <h2><span id="memory-title-1">Because somehow,</span><br /><em id="memory-title-2">the little moments stay.</em></h2>
+          <p id="memory-copy" class="body-copy"></p>
+          <div class="micro-note" id="memory-note">One photo is enough to bring an entire day back.</div>
+          <button class="primary-btn next-btn" data-next="3">Keep going <span class="arrow">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · Little things -->
+    <section class="scene" data-scene="3">
+      <div class="scene-inner center wide">
+        <div id="little-eyebrow" class="eyebrow">CHAPTER 03 · THE LITTLE THINGS</div>
+        <h2><span id="little-title-1">Three things I would</span><br /><em id="little-title-2">never want to lose.</em></h2>
+        <p id="little-copy" class="hero-copy"></p>
+        <div class="little-grid" id="little-grid">
+          <article class="little-card">
+            <span class="card-number">01</span><span class="card-symbol">☼</span>
+            <h3 id="little-title-1-card">The laughter</h3>
+            <p id="little-text-1-card"></p>
+            <span class="card-underline"></span>
+          </article>
+          <article class="little-card featured-card">
+            <span class="card-number">02</span><span class="card-symbol">♡</span>
+            <h3 id="little-title-2-card">The comfort</h3>
+            <p id="little-text-2-card"></p>
+            <span class="card-underline"></span>
+          </article>
+          <article class="little-card">
+            <span class="card-number">03</span><span class="card-symbol">✦</span>
+            <h3 id="little-title-3-card">The history</h3>
+            <p id="little-text-3-card"></p>
+            <span class="card-underline"></span>
+          </article>
+        </div>
+        <button class="ghost-btn next-btn scene-bottom-btn" data-next="4">One more thing <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- 04 · Choice -->
+    <section class="scene" data-scene="4">
+      <div class="scene-inner center narrow">
+        <div id="choice-eyebrow" class="eyebrow">CHAPTER 04 · A SMALL QUESTION</div>
+        <h2><span id="choice-title-1">Pick a little star.</span><br /><em id="choice-title-2">Don't overthink it.</em></h2>
+        <p id="choice-copy" class="hero-copy"></p>
+
+        <div class="star-choice-grid">
+          <button class="star-choice" data-choice="one" aria-label="Choose star one"><span>✦</span><small>ONE</small></button>
+          <button class="star-choice" data-choice="two" aria-label="Choose star two"><span>✧</span><small>TWO</small></button>
+          <button class="star-choice" data-choice="three" aria-label="Choose star three"><span>✦</span><small>THREE</small></button>
+        </div>
+        <p id="star-result" class="choice-result" role="status" aria-live="polite"></p>
+        <button id="choice-next" class="primary-btn hidden next-btn" data-next="5">I think you're ready <span class="arrow">→</span></button>
+      </div>
+    </section>
+
+    <!-- 05 · Letter -->
+    <section class="scene" data-scene="5">
+      <div class="scene-inner letter-wrap">
+        <div class="letter-card">
+          <div class="letter-glow" aria-hidden="true"></div>
+          <div id="letter-eyebrow" class="eyebrow">CHAPTER 05 · A FEW WORDS FOR ANANYA</div>
+          <div class="letter-lines">
+            <p class="letter-line"><span id="letter-greeting-prefix">Dear</span> <span id="recipient-name-letter" class="accent-placeholder">Ananya</span>,</p>
+            <p id="letter-text" class="letter-body" data-text=""></p>
+            <p class="letter-signoff"><span id="letter-signoff-1">For all the chapters still ahead,</span><br /><em id="letter-signoff-2">happy birthday, Ananya. ♡</em></p>
+          </div>
+        </div>
+        <div class="letter-footer">
+          <span>read slowly</span>
+          <button class="primary-btn next-btn letter-next" data-next="6">There is one last part <span class="arrow">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · Memory wall -->
+    <section class="scene" data-scene="6">
+      <div class="scene-inner center wide">
+        <div id="wall-eyebrow" class="eyebrow">CHAPTER 06 · A FEW FRAMES FROM US</div>
+        <h2><span id="wall-title-1">Some memories deserve</span><br /><em id="wall-title-2">a place of their own.</em></h2>
+        <p id="wall-copy" class="hero-copy"></p>
+        <div class="photo-wall" id="photo-wall">
+          <button class="photo-card photo-one" data-photo="1" aria-label="Open memory one">
+            <span class="photo-placeholder"><img id="wall-photo-1" alt="Memory one" /><span><strong>01</strong><small id="wall-caption-1">THE FUNNY ONE</small></span></span>
+          </button>
+          <button class="photo-card photo-two" data-photo="2" aria-label="Open memory two">
+            <span class="photo-placeholder"><img id="wall-photo-2" alt="Memory two" /><span><strong>02</strong><small id="wall-caption-2">THE BEAUTIFUL ONE</small></span></span>
+          </button>
+          <button class="photo-card photo-three" data-photo="3" aria-label="Open memory three">
+            <span class="photo-placeholder"><img id="wall-photo-3" alt="Memory three" /><span><strong>03</strong><small id="wall-caption-3">THE ONE WE JUST GET</small></span></span>
+          </button>
+        </div>
+        <div class="gallery-tip">tap a frame · let the memory come forward</div>
+        <button class="primary-btn next-btn scene-bottom-btn" data-next="7">Let the page get quiet <span class="arrow">→</span></button>
+      </div>
+    </section>
+
+    <!-- 07 · Pause -->
+    <section class="scene pause-scene" data-scene="7">
+      <div class="scene-inner center narrow pause-content">
+        <div id="pause-eyebrow" class="eyebrow">ONE LAST MOMENT</div>
+        <div class="pause-orb" aria-hidden="true"></div>
+        <h2><span id="pause-title-1">And now...</span><br /><em id="pause-title-2">just one thing left.</em></h2>
+        <p id="pause-copy" class="hero-copy"></p>
+        <button class="primary-btn next-btn pause-button" data-next="8"><span id="pause-button">Open the reveal</span> <span class="arrow">→</span></button>
+      </div>
+    </section>
+
+    <!-- 08 · Reveal -->
+    <section class="scene final-scene" data-scene="8">
+      <div class="reveal-flash" aria-hidden="true"></div>
+      <div class="fireworks" aria-hidden="true"></div>
+      <div class="confetti" aria-hidden="true"></div>
+      <div class="final-orbit orbit-one" aria-hidden="true"></div>
+      <div class="final-orbit orbit-two" aria-hidden="true"></div>
+      <div class="final-photo-stack" aria-hidden="true">
+        <div class="stack-photo stack-one" id="final-photo-1"></div>
+        <div class="stack-photo stack-two" id="final-photo-2"></div>
+        <div class="stack-photo stack-three" id="final-photo-3"></div>
+      </div>
+      <div class="scene-inner center final-content">
+        <div id="final-eyebrow" class="eyebrow glow-text">THE REVEAL</div>
+        <h2 class="final-title">
+          <span id="final-title-prefix" class="final-line final-line-one">Happy Birthday,</span><br />
+          <span class="final-name-row"><em id="final-title-name" class="final-line final-line-two">Ananya</em> <span class="final-cake">🎂</span></span>
+        </h2>
+        <p id="final-copy" class="final-copy"></p>
+        <div class="final-actions">
+          <button id="reveal-next" class="primary-btn next-btn final-next" data-next="9">One last note <span class="arrow">→</span></button>
+          <button id="music-btn" class="ghost-btn final-music" aria-pressed="false">Play music ♪</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 · Close -->
+    <section class="scene closing-scene" data-scene="9">
+      <div class="scene-inner center narrow">
+        <div id="close-eyebrow" class="eyebrow">CHAPTER 09 · UNTIL THE NEXT ONE</div>
+        <div class="closing-mark">♡</div>
+        <h2><span id="close-title-1">Here's to all the</span><br /><em id="close-title-2">chapters still unwritten.</em></h2>
+        <p id="close-copy" class="hero-copy"></p>
+        <p id="close-signoff" class="closing-signoff"></p>
+        <div class="closing-actions">
+          <button id="replay-btn" class="ghost-btn">Replay the journey ↺</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress" aria-label="Journey progress">
+    <button class="progress-dot active" data-goto="0" aria-label="Go to opening"></button>
+    <button class="progress-dot" data-goto="1" aria-label="Go to chapter 1"></button>
+    <button class="progress-dot" data-goto="2" aria-label="Go to memory"></button>
+    <button class="progress-dot" data-goto="3" aria-label="Go to little things"></button>
+    <button class="progress-dot" data-goto="4" aria-label="Go to choice"></button>
+    <button class="progress-dot" data-goto="5" aria-label="Go to letter"></button>
+    <button class="progress-dot" data-goto="6" aria-label="Go to memories"></button>
+    <button class="progress-dot" data-goto="7" aria-label="Go to pause"></button>
+    <button class="progress-dot" data-goto="8" aria-label="Go to reveal"></button>
+    <button class="progress-dot" data-goto="9" aria-label="Go to closing"></button>
+  </div>
+
+  <dialog id="memory-modal" class="memory-modal">
+    <button class="modal-close" id="modal-close" aria-label="Close memory">×</button>
+    <div class="modal-image-wrap"><img id="modal-image" alt="Expanded memory" /></div>
+    <div class="modal-meta">
+      <div class="eyebrow" id="modal-caption">MEMORY</div>
+      <p id="modal-text">A favourite frame, brought forward for a moment.</p>
+    </div>
+  </dialog>
+
+  <audio id="bg-music" loop preload="auto">
+    <source id="music-source" src="assets/audio/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="mobile-touch-note" aria-hidden="true">tap gently · take your time</div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
